@@ -6,13 +6,43 @@
     <title>La casa de Pastel</title>
 </head>
 <body>
+<script src="script.js"></script>
     <h1>Lá casa de Pastel</h1>
    <form id="FormPastel">
-     
-     <label>Pastel
+     Nome do Cliente = <input type="text" name="Nome" id="Nome" placeholder="Seu Nome">
+     <br>
+
+     CPF = <input type="text" name="cpf" id="cpf" placeholder="Seu CPF">
+     <br>
+
+     <label>Pastel =
          <select id="Cardapio"></select>
      </label><br>
      
+     <label>Tamanho =
+         <select id="Tamanho">
+     </label><br>
+
+     <label>Recebimento =
+         <select id="Receber">
+     </label><br>
+
      <label>
+       Forma de Pagamento = <input type="radio" name="pagamento" id="pagamento" value="pix"> Pix
+     </label>
+     <label>
+        <input type="radio" name="pagamento" id="pagamento" value="débito"> Débito
+     </label>
+     <label>
+        <input type="radio" name="pagamento" id="pagamento" value="crédito"> Crédito
+     </label>
+     <label>
+        <input type="radio" name="pagamento" id="pagamento" value="dinheiro"> Dinheiro
+     </label><br>
+
+     <h1>Informações Importantes</h1>
+     Endereço do Estabelecimento = <input type="text" name="endereçoo" value="Rua Lisboa, 435 - Jardim Panorama" readonly>
+     <br>
+     Número de Telefone do Estabelecimento = <input type="text" name="numeroo" value="(45)9914501514" readonly>
 </body>
 </html>
