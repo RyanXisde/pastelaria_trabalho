@@ -1,43 +1,35 @@
-const Cardapio_loja = [
-    { id: "carne", Pastel: " Pastel de Carne ", Preço: 15.00                  },
-    { id: "frango", Pastel: " Pastel de Frango ", Preço: 15.00                },
-    { id: "chocolate", Pastel: " Pastel de Chocolate ", Preço: 20.00          },
-    { id: "queijo", Pastel: " Pastel de Queijo ", Preço: 15.00                },
-    { id: "carneQueijo", Pastel: " Pastel de Carne com Queijo ", Preço: 15.00 },
-    { id: "cheddar", Pastel: " Pastel de Carne com Cheddar ", Preço: 20.00    }
+const cardapio_loja = [
+    { id: "carne", pastel: " Pastel de Carne ", preço: 15.00                  },
+    { id: "frango", pastel: " Pastel de Frango ", preço: 15.00                },
+    { id: "chocolate", pastel: " Pastel de Chocolate ", preço: 20.00          },
+    { id: "queijo", pastel: " Pastel de Queijo ", preço: 15.00                },
+    { id: "carneQueijo", pastel: " Pastel de Carne com Queijo ", preço: 15.00 },
+    { id: "cheddar", pastel: " Pastel de Carne com Cheddar ", preço: 20.00    }
 ];
 
-const Tamanho_loja = [
-    { id: "pequeno", Tamanho: " Pequeno ", Preço: 5.00 },
-    { id: "médio", Tamanho: " Médio ", Preço: 7.00     },
-    { id: "grande", Tamanho: " Grande ", Preço: 10.00  }
+const tamanho_loja = [
+    { id: "pequeno", tamanho: " Pequeno ", preço: 5.00 },
+    { id: "médio", tamanho: " Médio ", preço: 7.00     },
+    { id: "grande", tamanho: " Grande ", preço: 10.00  }
 ];
 
-
-
-
-
-function preechr() {
-    const selectCardapio = document.getElementByid("Cardapio");
-    for (let i = 0; 1 < Cardapio_loja.length; i++) {
-        const item = Cardapio_loja[i];
-        const option = document.creatElement("option");
-        option.value = item.id;
-        option.textContent = item.Pastel;
-        selectCardapio.appendChild(option);
+function preecher(){
+    const selectCardapio = document.getElementById("cardapio");
+     for (let i = 0; i < cardapio_loja.length; i++) {
+         const item = cardapio_loja[i];
+         const option = document.createElement("option");
+         option.value = item.id;
+         option.textContent = item.pastel;
+         selectCardapio.appendChild(option);
     }
 
-    const selectTamanho = document.getElementByid("Tamanho");
-    for (let i = 0; 1 < Tamanho_loja.length; i++) {
-        const item = Tamanho_loja[i];
-        const option = document.creatElement("option");
-        option.value = item.id;
-        option.textContent = item.Tamanho;
-        selectTamanho.appendChild(option);
-    }
-
-    
-
-
+    const selectTamanho = document.getElementById("tamanho");
+     for (let i = 0; i < tamanho_loja.length; i++) {
+         const item = tamanho_loja[i];
+         const option = document.createElement("option");
+         option.value = item.id;
+         option.textContent = item.tamanho.trim();
+         selectTamanho.appendChild(option);
 }
-preechr();
+}
+preecher();

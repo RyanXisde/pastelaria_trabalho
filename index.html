@@ -6,40 +6,62 @@
     <title>La casa de Pastel</title>
 </head>
 <body>
-<script src="script.js"></script>
-    <h1>Lá casa de Pastel</h1>
-    <form id="FormPastel">
-        Nome do Cliente = <input type="text" name="Nome" id="Nome" placeholder="Seu Nome">
+    <form id="FormPastel" action="#" method="post">
+        <label for="Nome">Nome do Cliente: </label>
+        <input type="text" name="Nome" id="Nome" placeholder="Seu Nome">
         <br>
 
-        CPF = <input type="text" name="cpf" id="cpf" placeholder="Seu CPF"><br>
-
-        Endereço = <input type="text" name="endereço" id="endereço" placeholder="Seu Endereço"><br>
-
-        <label>Pastel =
-            <select id="Cardapio"></select>
-        </label><br>
-        
-        <label>Tamanho =
-            <select id="Tamanho"></select>
-        </label><br>
-
-
-
-        <label>Forma de Pagamento: </label><br>
-            <input type="radio" name="pagamento" id="pagamento" value="pix"> Pix
-
-            <input type="radio" name="pagamento" id="pagamento" value="débito"> Débito
-
-            <input type="radio" name="pagamento" id="pagamento" value="crédito"> Crédito
-
-            <input type="radio" name="pagamento" id="pagamento" value="dinheiro"> Dinheiro
-        
-
-        <h1>Informações Importantes</h1>
-        Endereço do Estabelecimento = <input type="text" name="endereçoo" value="Rua Lisboa, 435 - Jardim Panorama" readonly>
+        <label for="cpf">CPF: </label>
+        <input type="text" name="cpf" id="cpf" placeholder="Seu CPF">
         <br>
-        Número de Telefone do Estabelecimento = <input type="text" name="numeroo" value="(45)9914501514" readonly>
+
+        <label for="endereco">Endereço: </label>
+        <input type="text" name="endereço" id="endereco" placeholder="Seu Endereço">
+        <br>
+
+        <label for="cardapioo">Pastel: </label>
+            <select id="cardapio" name="cardapio"></select>
+        <br>
+
+        <label for="tamanho">Tamanho: </label>
+            <select id="tamanho" name="tamanho"></select>
+        <br>
+
+        <fieldset>
+            <legend>Forma de Pagamento: </legend>
+
+            <label>
+                <input type="radio" name="pagamento" value="pix">
+                Pix
+            </label>
+
+            <label>
+                <input type="radio" name="pagamento" value="debito">
+                Débito
+            </label>
+
+            <label>
+                <input type="radio" name="pagamento" value="credito">
+                Crédito
+            </label>
+
+            <label>
+                <input type="radio" name="pagamento" value="dinheiro">
+                Dinheiro
+            </label>
+        </fieldset>
+
+        <h2>Informações Importantes</h2>
+
+        <label for="enderecoo">Endereço do Estabelecimento</label>
+        <input type="text" id="enderecoo" name="endereçoo" value="Rua Lisboa, 435 - Jardim Panorama" readonly>
+        
+        <br>
+
+        <label for="numeroo">Número de Telefone do Estabelecimento</label>
+        <input type="text" id="numeroo" name="numeroo" value="(45)9914501514" readonly>
     </form>
+
+    <script src="script.js"></script>
 </body>
 </html>
