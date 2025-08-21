@@ -1,31 +1,43 @@
-const Cardapio = [
-    { Id: "carne", Pastel: " Pastel de Carne ", Preço: 15.00                  },
-    { Id: "frango", Pastel: " Pastel de Frango ", Preço: 15.00                },
-    { Id: "chocolate", Pastel: " Pastel de Chocolate ", Preço: 20.00          },
-    { Id: "queijo", Pastel: " Pastel de Queijo ", Preço: 15.00                },
-    { Id: "carneQueijo", Pastel: " Pastel de Carne com Queijo ", Preço: 15.00 },
-    { Id: "cheddar", Pastel: " Pastel de Carne com Cheddar ", Preço: 20.00    }
+const Cardapio_loja = [
+    { id: "carne", Pastel: " Pastel de Carne ", Preço: 15.00                  },
+    { id: "frango", Pastel: " Pastel de Frango ", Preço: 15.00                },
+    { id: "chocolate", Pastel: " Pastel de Chocolate ", Preço: 20.00          },
+    { id: "queijo", Pastel: " Pastel de Queijo ", Preço: 15.00                },
+    { id: "carneQueijo", Pastel: " Pastel de Carne com Queijo ", Preço: 15.00 },
+    { id: "cheddar", Pastel: " Pastel de Carne com Cheddar ", Preço: 20.00    }
 ];
 
-const Tamanho = [
-    { Id: "pequeno", Tamanho: " Pequeno ", Preço: 5.00 },
-    { Id: "médio", Tamanho: " Médio ", Preço: 7.00     },
-    { Id: "grande", Tamanho: " Grande ", Preço: 10.00  }
+const Tamanho_loja = [
+    { id: "pequeno", Tamanho: " Pequeno ", Preço: 5.00 },
+    { id: "médio", Tamanho: " Médio ", Preço: 7.00     },
+    { id: "grande", Tamanho: " Grande ", Preço: 10.00  }
 ];
 
-const Receber = [
-    { Id: "entrega", Método: " Entrega ", Taxa: 5.00  },
-    { Id: "retirada", Método: " Retirada ", Taxa: 0.00 }
-];
 
-const Pagamento = [
-    { Id: "crédito", Método: " Crédito "   },
-    { Id: "débito", Método: " Débito "     },
-    { Id: "pix", Método: " Pix "           },
-    { Id: "dinheiro", Método: " Dinheiro " }
-];
 
-const Informações = [
-    { Id: "endereço", Endereço: " R. Lisboa, 385 - Jardim Alice I, Foz do Iguaçu " },
-    { Id: "telefone", Telefone: " (45)9914501514 "                                 }
-];
+
+
+function preechr() {
+    const selectCardapio = document.getElementByid("Cardapio");
+    for (let i = 0; 1 < Cardapio_loja.length; i++) {
+        const item = Cardapio_loja[i];
+        const option = document.creatElement("option");
+        option.value = item.id;
+        option.textContent = item.Pastel;
+        selectCardapio.appendChild(option);
+    }
+
+    const selectTamanho = document.getElementByid("Tamanho");
+    for (let i = 0; 1 < Tamanho_loja.length; i++) {
+        const item = Tamanho_loja[i];
+        const option = document.creatElement("option");
+        option.value = item.id;
+        option.textContent = item.Tamanho;
+        selectTamanho.appendChild(option);
+    }
+
+    
+
+
+}
+preechr();
