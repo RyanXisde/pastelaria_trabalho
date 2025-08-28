@@ -7,10 +7,9 @@
 </head>
 <body>
     <form id="FormPastel" action="#" method="post">
-        <label for="Nome">Nome do Cliente: </label>
-        <input type="text" name="Nome" id="Nome" placeholder="Seu Nome">
+        <label for="nome">Nome do Cliente: </label>
+        <input type="text" name="Nome" id="nome" placeholder="Seu Nome">
         <br>
-
         <label for="cpf">CPF: </label>
         <input type="text" name="cpf" id="cpf" placeholder="Seu CPF">
         <br>
@@ -19,12 +18,16 @@
         <input type="text" name="endereço" id="endereco" placeholder="Seu Endereço">
         <br>
 
-        <label for="cardapioo">Pastel: </label>
+        <label for="cardapio">Pastel: </label>
             <select id="cardapio" name="cardapio"></select>
         <br>
 
         <label for="tamanho">Tamanho: </label>
             <select id="tamanho" name="tamanho"></select>
+        <br>
+
+        <label for="entrega">Entrega ou Busca: </label>
+             <select name="entrega" id="entrega"></select>
         <br>
 
         <fieldset>
@@ -53,12 +56,12 @@
 
         <h2>Informações Importantes</h2>
 
-        <label for="enderecoo">Endereço do Estabelecimento</label>
+        <label for="enderecoo">Endereço do Estabelecimento: </label>
         <input type="text" id="enderecoo" name="endereçoo" value="Rua Lisboa, 435 - Jardim Panorama" readonly>
         
         <br>
 
-        <label for="numeroo">Número de Telefone do Estabelecimento</label>
+        <label for="numeroo">Número de Telefone do Estabelecimento: </label>
         <input type="text" id="numeroo" name="numeroo" value="(45)9914501514" readonly>
     </form>
 
