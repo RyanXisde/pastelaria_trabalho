@@ -10,7 +10,7 @@ const cardapio_loja = [
 const tamanho_loja = [
     { id: "pequeno", tamanho: " Pequeno ", preco: 5.00 },
     { id: "médio", tamanho: " Médio ", preco: 7.00     },
-    { id: "grande", tamanho: " Grande ", preço: 10.00  }
+    { id: "grande", tamanho: " Grande ", preco: 10.00  }
 ];
 
 const entrega_loja = [
@@ -48,7 +48,7 @@ function preecher(){
 preecher();
 
 function procurarPorId(lista, idProcurado) {
-    for (let i = 0; i < lista.lenght; i++) {
+    for (let i = 0; i < lista.length; i++) {
         if (lista[i].id === idProcurado) {
             return lista[i];
         }
@@ -58,26 +58,29 @@ function procurarPorId(lista, idProcurado) {
 preencherOpcoes();
 
 function gerarRelatorio() {
+    
       const nomeId = document.getElementById("nome").value;   
       const cpfId = document.getElementById("cpf").value;
       const enderecoId = document.getElementById("endereco").value;
-      const cardapioId = parseInt(document.getElementById("cardapio").value);
-      const tamanhoId = parseInt(document.getElementById("tamanho").value);
-      const entregaId = parseInt(document.getElementById("entrega").value);
+      const cardapioId = document.getElementById("cardapio").value;
+      const tamanhoId = document.getElementById("tamanho").value;
+      const entregaId = document.getElementById("entrega").value;
      
       var cardapioo = procurarPorId(cardapio_loja, cardapioId);
       var tamanhoo = procurarPorId(tamanho_loja, tamanhoId);
       var entregaa = procurarPorId(entrega_loja, entregaId);
-
-      const total = cardapio_loja.preco + tamanho_loja.preco + entrega_loja.preco;
+      const total = cardapioo.preco + tamanhoo.preco + entregaa.preco;
 
       const relatorioHTML =`
          <h2>Relatório do Pedido</h2>
          <p><strong>Comprador: </strong> ${nomeId} </p>
          <p><strong>CPF: </strong> ${cpfId} </p>
          <p><strong>Endereço: </strong> ${enderecoId} </p>
-         <p><strong>Cardápio: </strong> ${cardapioId} -  R$ ${cardapio_loja.preco.ToFixed(2)}  </p>
-         <p><strong>Tamanho: </strong> ${tamanhoId} - R$ ${tamanho_loja.preco.ToFixed(2)} </p>
-         <p><strong>Modo de Recebimento: </strong> ${entregaId} - R$ ${entrega_loja.ToFixed(2)} </p>
-         `
+         <p><strong>Cardápio: </strong> ${cardapioId} -  R$ ${cardapioo.preco.ToFixed(2)}  </p>
+         <p><strong>Tamanho: </strong> ${tamanhoId} - R$ ${tamanhoo.preco.ToFixed(2)} </p>
+         <p><strong>Modo de Recebimento: </strong> ${entregaId} - R$ ${entregaa.ToFixed(2)} </p>
+         <p>Obrigado por usar o relatório da Lá casa de Pastel!</p>
+         `;
+         
+         document.getElementById("relatorio").innerHTML = relatorioHTML;
 }

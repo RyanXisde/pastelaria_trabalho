@@ -60,7 +60,9 @@
                 Dinheiro
             </label>
         </fieldset>
-
+        
+        <br>
+        <hr>
         <h2>Informações Importantes</h2>
 
         <label for="enderecoo">Endereço do Estabelecimento: </label>
@@ -68,11 +70,14 @@
         
         <br>
         <br>
-        
+
         <label for="numeroo">Número de Telefone do Estabelecimento: </label>
         <input type="text" id="numeroo" name="numeroo" value="(45)9914501514" readonly>
     </form>
-
+         <hr> 
+         <div id="relatorio"></div>
+         <br>
+         <button onclick="gerarRelatorio()">Gerar relatório do Pedido</button>
     <script src="script.js"></script>
 </body>
 </html>
