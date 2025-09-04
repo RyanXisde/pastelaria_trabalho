@@ -53,6 +53,16 @@ function preencher(){
          selectCardapioww.appendChild(option);
     } 
 
+    const selectAcompanhante = document.getElementById("acompanhantee");
+     for (let i = 0; i < acompanhante_loja.length; i++) {
+         const item = acompanhante_loja[i];
+         const option = document.createElement("option");
+         option.value = item.id;
+         option.textContent = item.acompanhante;
+         selectAcompanhante.appendChild(option);
+    }
+
+
     const selectTamanho = document.getElementById("tamanho");
      for (let i = 0; i < tamanho_loja.length; i++) {
          const item = tamanho_loja[i];
@@ -91,12 +101,14 @@ function gerarRelatorio() {
       const cardapioId_2 = document.getElementById("cardapioww").value;
       const tamanhoId = document.getElementById("tamanho").value;
       const entregaId = document.getElementById("entrega").value;
+      const acompanhanteId = document.getElementById("acompanhantee").value;
      
       var cardapioo = procurarPorId(cardapio_loja, cardapioId);
       var tamanhoo = procurarPorId(tamanho_loja, tamanhoId);
       var entregaa = procurarPorId(entrega_loja, entregaId);
       var cardapioww = procurarPorId(cardapio_loja_2, cardapioId_2);
-      const total = cardapioo.preco + tamanhoo.preco + entregaa.preco + cardapioww.preco;
+      var acompanhantee = procurarPorId(acompanhante_loja, acompanhanteId);
+      const total = cardapioo.preco + tamanhoo.preco + entregaa.preco + cardapioww.preco + acompanhantee.preco;
 
       const relatorioHTML =`
          <h2>Relatório do Pedido</h2>
@@ -105,6 +117,7 @@ function gerarRelatorio() {
          <p><strong>Endereço: </strong> ${enderecoId} </p>
          <p><strong>Pastel: </strong> ${cardapioId} -  R$ ${cardapioo.preco.toFixed(2)}  </p>
          <p><strong> Outro Pastel: </strong> ${cardapioId_2} -  R$ ${cardapioww.preco.toFixed(2)}  </p>
+         <p><strong> Acompanhante: </strong> ${acompanhanteId} -  R$ ${acompanhantee.preco.toFixed(2)}  </p>
          <p><strong>Tamanho: </strong> ${tamanhoId} - R$ ${tamanhoo.preco.toFixed(2)} </p>
          <p><strong>Modo de Recebimento: </strong> ${entregaId} - R$ ${entregaa.preco.toFixed(2)} </p>
          <p><strong>Preço Total: </strong> - R$ ${total.toFixed(2)} </p>
