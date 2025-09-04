@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La casa de Pastel</title>
+    <style>
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #relatorio, #relatorio * {
+        visibility: visible;
+      }
+      #relatorio {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
     <form id="FormPastel" action="#" method="post">
@@ -79,14 +95,16 @@
         <label for="numeroo">Número de Telefone do Estabelecimento: </label>
         <input type="text" id="numeroo" name="numeroo" value="(45)9914501514" readonly>
     </form>
+
+
          <hr> 
          <div id="relatorio"></div>
          <br>
          <button onclick="gerarRelatorio()">Gerar relatório do Pedido</button>
-    <script src="script.js"></script>
+    
 
     <br>
     <button onclick="window.print()">Gerar PDF do relatório</button>
-
+    <script src="script.js"></script>
 </body>
 </html>
