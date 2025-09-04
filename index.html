@@ -27,6 +27,11 @@
         <br>
         <br>
 
+        <label for="cardapioww">Outro Pastel: </label>
+            <select id="cardapioww" name="cardapioww"></select>
+        <br>
+        <br>
+
         <label for="tamanho">Tamanho: </label>
             <select id="tamanho" name="tamanho"></select>
         <br>
@@ -41,22 +46,22 @@
             <legend>Forma de Pagamento: </legend>
 
             <label>
-                <input type="radio" name="pagamento" value="pix">
+                <input type="radio" name="pagamento" value="Pix" id="pagamentow">
                 Pix
             </label>
 
             <label>
-                <input type="radio" name="pagamento" value="debito">
+                <input type="radio" name="pagamento" value="Debito" id="pagamentow">
                 Débito
             </label>
 
             <label>
-                <input type="radio" name="pagamento" value="credito">
+                <input type="radio" name="pagamento" value="Credito" id="pagamentow">
                 Crédito
             </label>
 
             <label>
-                <input type="radio" name="pagamento" value="dinheiro">
+                <input type="radio" name="pagamento" value="Dinheiro" id="pagamentow">
                 Dinheiro
             </label>
         </fieldset>
@@ -79,5 +84,9 @@
          <br>
          <button onclick="gerarRelatorio()">Gerar relatório do Pedido</button>
     <script src="script.js"></script>
+
+    <br>
+    <button onclick="window.print()">Gerar PDF do relatório</button>
+
 </body>
 </html>
