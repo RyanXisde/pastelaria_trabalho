@@ -25,15 +25,14 @@ const tamanho_loja = [
 
 const entrega_loja = [
     { id: "Entrega", tipo: "Entrega", preco: 5.00  },
-    { id: "Buscar", tipo: "Busca", preco: 0.00   }
+    { id: "Buscar", tipo: "Busca", preco: 0.00     }
 ];
 
 const acompanhante_loja = [
-    { id: "Caldo de Cana", acompanhante: "Caldo de Cana", preco: 5.00}
-    { id: "Suco Natural", acompanhante: "Caldo de Cana", preco: 5.00}
-    { id: "Refrigerante", acompanhante: "Caldo de Cana", preco: 5.00}
-
-]
+    { id: "Caldo de Cana", acompanhante: "Caldo de Cana", preco: 5.00},
+    { id: "Suco Natural", acompanhante: "Suco Natural", preco: 3.00},
+    { id: "Refrigerante", acompanhante: "Refrigerante", preco: 7.00}
+];
 
 function preencher(){
     const selectCardapio = document.getElementById("cardapio");
