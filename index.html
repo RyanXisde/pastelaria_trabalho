@@ -3,25 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La casa de Pastel</title>
-    <style>
-    @media print {
-      body * {
-        visibility: hidden;
-      }
-      #relatorio, #relatorio * {
-        visibility: visible;
-      }
-      #relatorio {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-      }
-    }
-  </style>
+    <title>La casa de Pastel</title> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<main>
+    <header>
+        <img class="logo" src="imagens/logo" alt="logotipo">
+    </header>
+</main>
     <form id="FormPastel" action="#" method="post">
         <label for="nome">Nome do Cliente: </label>
         <input type="text" name="Nome" id="nome" placeholder="Seu Nome">
@@ -111,5 +101,6 @@
     <br>
     <button onclick="window.print()">Gerar PDF do relatório</button>
     <script src="script.js"></script>
+    </main>
 </body>
 </html>
