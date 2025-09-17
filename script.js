@@ -1,37 +1,37 @@
 const cardapio_loja = [
-    { id: "Carne", pastel: " Pastel de Carne ", preco: 15.00                  },
-    { id: "Frango", pastel: " Pastel de Frango ", preco: 15.00                },
-    { id: "Chocolate", pastel: " Pastel de Chocolate ", preco: 20.00          },
-    { id: "Queijo", pastel: " Pastel de Queijo ", preco: 15.00                },
-    { id: "CarneQueijo", pastel: " Pastel de Carne com Queijo ", preco: 15.00 },
-    { id: "Cheddar", pastel: " Pastel de Carne com Cheddar ", preco: 20.00    }
+    { id: "Carne", pastel: " Pastel de Carne - R$ 15.00 ", preco: 15.00                  },
+    { id: "Frango", pastel: " Pastel de Frango - R$ 15.00 ", preco: 15.00                },
+    { id: "Chocolate", pastel: " Pastel de Chocolate - R$ 20.00 ", preco: 20.00          },
+    { id: "Queijo", pastel: " Pastel de Queijo - R$ 15.00 ", preco: 15.00                },
+    { id: "CarneQueijo", pastel: " Pastel de Carne com Queijo - R$ 15.00 ", preco: 15.00 },
+    { id: "Cheddar", pastel: " Pastel de Carne com Cheddar - R$ 20.00 ", preco: 20.00    }
 ];
 
 const cardapio_loja_2 = [
-    { id: "Carne", pastel: " Pastel de Carne ", preco: 15.00                  },
-    { id: "Frango", pastel: " Pastel de Frango ", preco: 15.00                },
-    { id: "Chocolate", pastel: " Pastel de Chocolate ", preco: 20.00          },
-    { id: "Queijo", pastel: " Pastel de Queijo ", preco: 15.00                },
-    { id: "CarneQueijo", pastel: " Pastel de Carne com Queijo ", preco: 15.00 },
-    { id: "Cheddar", pastel: " Pastel de Carne com Cheddar ", preco: 20.00    },
+    { id: "Carne", pastel: " Pastel de Carne - R$15.00 ", preco: 15.00                  },
+    { id: "Frango", pastel: " Pastel de Frango - R$ 15.00 ", preco: 15.00                },
+    { id: "Chocolate", pastel: " Pastel de Chocolate - R$ 20.00 ", preco: 20.00          },
+    { id: "Queijo", pastel: " Pastel de Queijo - R$ 15.00 ", preco: 15.00                },
+    { id: "CarneQueijo", pastel: " Pastel de Carne com Queijo - R$ 15.00 ", preco: 15.00 },
+    { id: "Cheddar", pastel: " Pastel de Carne com Cheddar - R$ 20.00 ", preco: 20.00    },
     { id: "Nada", pastel: " Nada ", preco: 0.00                               }
 ];
 
 const tamanho_loja = [
-    { id: "Pequeno", tamanho: " Pequeno ", preco: 5.00 },
-    { id: "Médio", tamanho: " Médio ", preco: 7.00     },
-    { id: "Grande", tamanho: " Grande ", preco: 10.00  }
+    { id: "Pequeno", tamanho: " Pequeno - R$ 5.00 ", preco: 5.00 },
+    { id: "Médio", tamanho: " Médio - R$ 7.00 ", preco: 7.00     },
+    { id: "Grande", tamanho: " Grande - - R$ 10.00 ", preco: 10.00  }
 ];
 
 const entrega_loja = [
-    { id: "Entrega", tipo: "Entrega", preco: 5.00  },
+    { id: "Entrega", tipo: "Entrega - R$ 5.00", preco: 5.00  },
     { id: "Buscar", tipo: "Busca", preco: 0.00     }
 ];
 
 const acompanhante_loja = [
-    { id: "Caldo de Cana", acompanhante: "Caldo de Cana", preco: 5.00},
-    { id: "Suco Natural", acompanhante: "Suco Natural", preco: 3.00},
-    { id: "Refrigerante", acompanhante: "Refrigerante", preco: 7.00}
+    { id: "Caldo de Cana", acompanhante: "Caldo de Cana - R$ 5.00 ", preco: 5.00},
+    { id: "Suco Natural", acompanhante: "Suco Natural - R$ 3.00 ", preco: 3.00},
+    { id: "Refrigerante", acompanhante: "Refrigerante - R$ 7.00 ", preco: 7.00}
 ];
 
 function preencher(){
