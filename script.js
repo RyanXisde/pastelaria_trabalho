@@ -92,8 +92,7 @@ function procurarPorId(lista, idProcurado) {
 }
 
 function gerarRelatorio() {
-    
-      const PagamentoId = document.getElementById("pagamentow").value;
+      const PagamentoId = document.querySelector('input[name="pagamento"]:checked')?.value || "Nenhum";
       const nomeId = document.getElementById("nome").value;   
       const cpfId = document.getElementById("cpf").value;
       const enderecoId = document.getElementById("endereco").value;
