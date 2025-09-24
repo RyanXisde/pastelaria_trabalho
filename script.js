@@ -30,8 +30,9 @@ const entrega_loja = [
 
 const acompanhante_loja = [
     { id: "Caldo de Cana", acompanhante: "Caldo de Cana - R$ 5.00 ", preco: 5.00},
-    { id: "Suco Natural", acompanhante: "Suco Natural - R$ 3.00 ", preco: 3.00},
-    { id: "Refrigerante", acompanhante: "Refrigerante - R$ 7.00 ", preco: 7.00}
+    { id: "Suco Natural", acompanhante: "Suco Natural - R$ 3.00 ", preco: 3.00  },
+    { id: "Refrigerante", acompanhante: "Refrigerante - R$ 7.00 ", preco: 7.00  },
+    { id: "Nada", acompanhante: "Nenhum - R$ 0.00 ", preco: 0.00                }
 ];
 
 function preencher(){
