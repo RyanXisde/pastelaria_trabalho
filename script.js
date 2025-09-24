@@ -1,20 +1,20 @@
 const cardapio_loja = [
     { id: "Carne", pastel: " Pastel de Carne - R$ 15.00 ", preco: 15.00                  },
     { id: "Frango", pastel: " Pastel de Frango - R$ 15.00 ", preco: 15.00                },
-    { id: "Chocolate", pastel: " Pastel de Chocolate - R$ 20.00 ", preco: 20.00          },
     { id: "Queijo", pastel: " Pastel de Queijo - R$ 15.00 ", preco: 15.00                },
     { id: "CarneQueijo", pastel: " Pastel de Carne com Queijo - R$ 15.00 ", preco: 15.00 },
+    { id: "Chocolate", pastel: " Pastel de Chocolate - R$ 20.00 ", preco: 20.00          },
     { id: "Cheddar", pastel: " Pastel de Carne com Cheddar - R$ 20.00 ", preco: 20.00    }
 ];
 
 const cardapio_loja_2 = [
-    { id: "Carne", pastel: " Pastel de Carne - R$15.00 ", preco: 15.00                  },
+    { id: "Carne", pastel: " Pastel de Carne - R$ 15.00 ", preco: 15.00                  },
     { id: "Frango", pastel: " Pastel de Frango - R$ 15.00 ", preco: 15.00                },
-    { id: "Chocolate", pastel: " Pastel de Chocolate - R$ 20.00 ", preco: 20.00          },
     { id: "Queijo", pastel: " Pastel de Queijo - R$ 15.00 ", preco: 15.00                },
     { id: "CarneQueijo", pastel: " Pastel de Carne com Queijo - R$ 15.00 ", preco: 15.00 },
+    { id: "Chocolate", pastel: " Pastel de Chocolate - R$ 20.00 ", preco: 20.00          },
     { id: "Cheddar", pastel: " Pastel de Carne com Cheddar - R$ 20.00 ", preco: 20.00    },
-    { id: "Nada", pastel: " Nada ", preco: 0.00                               }
+    { id: "Nada", pastel: " Nada - R$ 0.00 ", preco: 0.00                                }
 ];
 
 const tamanho_loja = [
@@ -92,7 +92,7 @@ function procurarPorId(lista, idProcurado) {
 }
 
 function gerarRelatorio() {
-      const PagamentoId = document.querySelector('input[name="pagamento"]:checked')?.value || "Nenhum";
+      const PagamentoId = document.querySelector('input[name="pagamento"]:checked')?.value || "Indefinido...";
       const nomeId = document.getElementById("nome").value;   
       const cpfId = document.getElementById("cpf").value;
       const enderecoId = document.getElementById("endereco").value;
