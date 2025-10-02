@@ -1,9 +1,9 @@
 @media print {
   body * {
-    visibility: hidden;   /* Esconde tudo */
+    visibility: hidden;   
   }
   #relatorio, #relatorio * {
-    visibility: visible;  /* Mostra só o relatório */
+    visibility: visible;  
   }
   #relatorio {
     position: absolute;
