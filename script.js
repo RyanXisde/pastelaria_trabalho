@@ -93,37 +93,46 @@ function procurarPorId(lista, idProcurado) {
 }
 
 function gerarRelatorio() {
-      const PagamentoId = document.querySelector('input[name="pagamento"]:checked')?.value || "Indefinido...";
-      const nomeId = document.getElementById("nome").value;   
-      const cpfId = document.getElementById("cpf").value;
-      const enderecoId = document.getElementById("endereco").value;
-      const cardapioId = document.getElementById("cardapio").value;
-      const cardapioId_2 = document.getElementById("cardapioww").value;
-      const tamanhoId = document.getElementById("tamanho").value;
-      const entregaId = document.getElementById("entrega").value;
-      const acompanhanteId = document.getElementById("acompanhantee").value;
-     
-      var cardapioo = procurarPorId(cardapio_loja, cardapioId);
-      var tamanhoo = procurarPorId(tamanho_loja, tamanhoId);
-      var entregaa = procurarPorId(entrega_loja, entregaId);
-      var cardapioww = procurarPorId(cardapio_loja_2, cardapioId_2);
-      var acompanhantee = procurarPorId(acompanhante_loja, acompanhanteId);
-      const total = cardapioo.preco + tamanhoo.preco + entregaa.preco + cardapioww.preco + acompanhantee.preco;
+    const PagamentoId = document.querySelector('input[name="pagamento"]:checked')?.value || "Indefinido...";
+    const nomeId = document.getElementById("nome").value;   
+    const cpfId = document.getElementById("cpf").value;
+    const enderecoId = document.getElementById("endereco").value;
+    const cardapioId = document.getElementById("cardapio").value;
+    const cardapioId_2 = document.getElementById("cardapioww").value;
+    const tamanhoId = document.getElementById("tamanho").value;
+    const entregaId = document.getElementById("entrega").value;
+    const acompanhanteId = document.getElementById("acompanhantee").value;
 
-      const relatorioHTML =`
-         <h2>Relatório do Pedido</h2>
-         <p><strong>Comprador: </strong> ${nomeId} </p>
-         <p><strong>CPF: </strong> ${cpfId} </p>
-         <p><strong>Endereço: </strong> ${enderecoId} </p>
-         <p><strong>Pastel: </strong> ${cardapioId} -  R$ ${cardapioo.preco.toFixed(2)}  </p>
-         <p><strong> Outro Pastel: </strong> ${cardapioId_2} -  R$ ${cardapioww.preco.toFixed(2)}  </p>
-         <p><strong> Acompanhante: </strong> ${acompanhanteId} -  R$ ${acompanhantee.preco.toFixed(2)}  </p>
-         <p><strong>Tamanho: </strong> ${tamanhoId} - R$ ${tamanhoo.preco.toFixed(2)} </p>
-         <p><strong>Modo de Recebimento: </strong> ${entregaId} - R$ ${entregaa.preco.toFixed(2)} </p>
-         <p><strong>Preço Total: </strong> - R$ ${total.toFixed(2)} </p>
-         <p><strong>Modo de Pagamento: </strong> - ${PagamentoId}</p>
-         <p>Obrigado por usar o relatório da Lá casa de Pastel!</p>
-         `;
-         
-         document.getElementById("relatorio").innerHTML = relatorioHTML;
+    const qtdCardapio = parseInt(document.getElementById("qtdCardapio").value) || 0;
+    const qtdCardapio2 = parseInt(document.getElementById("qtdCardapio2").value) || 0;
+    const qtdAcompanhante = parseInt(document.getElementById("qtdAcompanhante").value) || 0;
+
+    var cardapioo = procurarPorId(cardapio_loja, cardapioId);
+    var cardapioww = procurarPorId(cardapio_loja_2, cardapioId_2);
+    var tamanhoo = procurarPorId(tamanho_loja, tamanhoId);
+    var entregaa = procurarPorId(entrega_loja, entregaId);
+    var acompanhantee = procurarPorId(acompanhante_loja, acompanhanteId);
+
+    const total = (cardapioo.preco * qtdCardapio) + 
+                  (cardapioww.preco * qtdCardapio2) + 
+                  (acompanhantee.preco * qtdAcompanhante) +
+                  tamanhoo.preco +  
+                  entregaa.preco;
+
+    const relatorioHTML =`
+       <h2>Relatório do Pedido</h2>
+       <p><strong>Comprador: </strong> ${nomeId} </p>
+       <p><strong>CPF: </strong> ${cpfId} </p>
+       <p><strong>Endereço: </strong> ${enderecoId} </p>
+       <p><strong>Pastel: </strong> ${cardapioId} x${qtdCardapio} = R$ ${(cardapioo.preco * qtdCardapio).toFixed(2)}  </p>
+       <p><strong>Outro Pastel: </strong> ${cardapioId_2} x${qtdCardapio2} = R$ ${(cardapioww.preco * qtdCardapio2).toFixed(2)}  </p>
+       <p><strong>Acompanhante: </strong> ${acompanhanteId} x${qtdAcompanhante} = R$ ${(acompanhantee.preco * qtdAcompanhante).toFixed(2)}  </p>
+       <p><strong>Tamanho: </strong> ${tamanhoId} = R$ ${tamanhoo.preco.toFixed(2)} </p>
+       <p><strong>Modo de Recebimento: </strong> ${entregaId} = R$ ${entregaa.preco.toFixed(2)} </p>
+       <p><strong>Preço Total: </strong> R$ ${total.toFixed(2)} </p>
+       <p><strong>Modo de Pagamento: </strong> ${PagamentoId}</p>
+       <p>Obrigado por usar o relatório da Lá Casa de Pastel!</p>
+    `;
+    
+    document.getElementById("relatorio").innerHTML = relatorioHTML;
 }

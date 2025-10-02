@@ -1,8 +1,24 @@
+@media print {
+  body * {
+    visibility: hidden;   /* Esconde tudo */
+  }
+  #relatorio, #relatorio * {
+    visibility: visible;  /* Mostra só o relatório */
+  }
+  #relatorio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
 body{
     background-color: rgb(0, 0, 0);
     height: 2000px;
     color: rgb(255, 255, 255);
 }
+
 .logo{
     height: 270px;
 }
