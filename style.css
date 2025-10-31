@@ -19,11 +19,6 @@ body{
     color: rgb(255, 255, 255);
 }
 
-body{
-  background-image: url(/tmp/guest-uxrgbv/Downloads/AAAABaJJIdyKMNvEcWhAtI5Xk12MQLY8DLxAkM2k8unVHyRordNL9Jn726cLoEmP_DAn44vwE3_l9dWTpDQTvmzsk6REyj4veXm9bvQ8.jpg);
-  background-size: cover;
-}
-
 .logo{
     height: 270px;
 }
@@ -46,7 +41,7 @@ label {
 input, select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ffffff;
+  border: 1px solid #050404;
   border-radius: 10px;
   margin-bottom: 20px;
 }
@@ -66,7 +61,7 @@ header {
 
 button {
   background-color: #f7f0f0;
-  color: rgb(247, 163, 163);
+  color: rgb(2, 1, 1);
   border: none;
   padding: 12px 20px;
   border-radius: 8px;
@@ -80,3 +75,4 @@ button:hover {
   background-color: #0a0a0a;
 }
 
+ 

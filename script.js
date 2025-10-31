@@ -92,6 +92,18 @@ function procurarPorId(lista, idProcurado) {
     return null;
 }
 
+document.getElementById("nome").addEventListener("input", function() {
+  const nome = this.value;
+  const mensagem = document.getElementById("mensagemBoasVindas");
+  
+  if (nome.trim() !== "nome") {
+    mensagem.textContent = `👋 Olá, ${nome}! Seja bem-vindo à La Casa de Pastel!`;
+  } else {
+    mensagem.textContent = "nome";
+  }
+});
+
+
 function gerarRelatorio() {
     const PagamentoId = document.querySelector('input[name="pagamento"]:checked')?.value || "Indefinido...";
     const nomeId = document.getElementById("nome").value;
