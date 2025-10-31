@@ -15,13 +15,17 @@
     <form id="FormPastel" action="#" method="post">
         <hr>
         <h2>Informações Do Cliente</h2>
-        <label for="nome">Nome do Cliente: </label>
+        <label for="nome">Nome: </label>
         <input type="text" name="Nome" id="nome" placeholder="Seu Nome">
+        <br>
+        <br>
+        <label for="Numero de Telefone">Telefone:</label>
+        <input type="number" name="Numero de Telefone" id="Telefone" placeholder="Seu Telefone">
         <br>
         <br>
 
         <label for="cpf">CPF: </label>
-        <input type="text" name="cpf" id="cpf" placeholder="Seu CPF">
+        <input type="number" name="cpf" id="cpf" placeholder="Seu CPF">
         <br>
         <br>
 
@@ -61,19 +65,19 @@
             <legend>Forma de Pagamento: </legend>
 
             <label>
-              Pix<input type="radio" name="pagamento" value="Pix" id="pagamentow">
+              Pix<input type="checkbox" name="pagamento" value="Pix" id="pagamentow">
             </label>
 
             <label>
-              Débito<input type="radio" name="pagamento" value="Debito" id="pagamentow">
+              Débito<input type="checkbox" name="pagamento" value="Debito" id="pagamentow">
             </label>
 
             <label>
-              Crédito<input type="radio" name="pagamento" value="Credito" id="pagamentow">
+              Crédito<input type="checkbox" name="pagamento" value="Credito" id="pagamentow">
             </label>
 
             <label>
-               Dinheiro<input type="radio" name="pagamento" value="Dinheiro" id="pagamentow">
+               Dinheiro<input type="checkbox" name="pagamento" value="Dinheiro" id="pagamentow">
             </label>
         </fieldset>
         
@@ -103,6 +107,8 @@
     
 
     <br>
+    <br>
+    
     <button onclick="window.print()">Gerar PDF do relatório</button>
     <script src="script.js"></script>
     </main>

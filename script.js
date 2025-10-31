@@ -94,7 +94,8 @@ function procurarPorId(lista, idProcurado) {
 
 function gerarRelatorio() {
     const PagamentoId = document.querySelector('input[name="pagamento"]:checked')?.value || "Indefinido...";
-    const nomeId = document.getElementById("nome").value;   
+    const nomeId = document.getElementById("nome").value;
+    const foneid = document.getElementById("Telefone").value;   
     const cpfId = document.getElementById("cpf").value;
     const enderecoId = document.getElementById("endereco").value;
     const cardapioId = document.getElementById("cardapio").value;
